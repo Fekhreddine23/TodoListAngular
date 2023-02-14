@@ -7,12 +7,10 @@ import { HomeComponent } from './componant/home/home.component';
 import { TodosComponent } from './componant/todos/todos.component';
 import { FooterComponent } from './componant/footer/footer.component'; 
 import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
-const routes: Routes = [
-  {path: 'Home', component: HomeComponent},
-  {path: 'todos', component: TodosComponent},
-];
+
 
 @NgModule({
   declarations: [
@@ -24,7 +22,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
