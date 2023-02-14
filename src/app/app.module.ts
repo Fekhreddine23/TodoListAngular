@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './componant/home/home.component';
 import { TodosComponent } from './componant/todos/todos.component';
 import { FooterComponent } from './componant/footer/footer.component'; 
-import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactComponent } from './componant/contact/contact.component';
 
 
 
@@ -17,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HomeComponent,
     TodosComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

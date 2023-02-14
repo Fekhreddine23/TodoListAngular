@@ -1,0 +1,8 @@
+nav div {
+    cursor: pointer;
+  }
+  
+  nav div.active {
+    background: #000;
+    color: #fff;
+  }

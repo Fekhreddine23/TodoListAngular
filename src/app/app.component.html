@@ -1,13 +1,25 @@
 <nav>
-  <ul>
-    <li routerLink="home">Accueil liste</li>
-    <li routerLinks="todos">Liste des taches</li>
-  </ul>
+  <div
+    routerLinkActive="active"
+    routerLink="home">
+      Accueil
+  </div>
+  <div
+    routerLinkActive="active"
+    routerLink="todos">
+    Liste des Tâches
+  </div>
+
+
+  <div
+    routerLinkActive="active" 
+    routerLink="contact">
+    contact
+  </div>
 </nav>
 
 <router-outlet></router-outlet>
 
 <app-footer></app-footer>
-
  
    
