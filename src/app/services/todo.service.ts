@@ -6,4 +6,15 @@ import { Injectable } from '@angular/core';
 export class TodoService {
 
   constructor() { }
+
+/** la mission du service et ses methodes  */
+  findAll(){}
+
+  findById(){}
+
+  createOne(){}
+
+  editOne(){}
+
+  deleteOne(){}
 }
