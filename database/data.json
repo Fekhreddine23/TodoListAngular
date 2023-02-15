@@ -23,7 +23,8 @@
     {
       "id": "ceaca077-5e6f-4307-b9c8-1d1f36fc1a31",
       "text": "Connaître Angular",
-      "done": true
+      "done": false,
+      "isEditable": false
     },
     {
       "text": "manger",

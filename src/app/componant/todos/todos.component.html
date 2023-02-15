@@ -3,7 +3,18 @@
 <div class="todos">
 
   <div class="todo" *ngFor="let todo of todos">
-    <h3 [class.done]="todo.done">{{todo.text}} </h3>
+   
+    <h3
+      *ngIf="!todo.isEditable"
+      [class.done]="todo.done">
+      {{ todo.text }}
+    </h3>
+    <input
+      *ngIf="todo.isEditable"
+      type="text"
+      [(ngModel)]="todo.text">
+
+
     <div class="buttons">
       <button   class="bt-check"
       (click)="editTodo(todo)"> 
