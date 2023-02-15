@@ -35,21 +35,31 @@ export class TodosComponent  implements OnInit{
   addTodoItem(form: NgForm) {
     if (form.valid && form.touched) {
      // this.todo.id = crypto.randomUUID;
-   this._todoService.createOne(form.value).subscribe( () =>{
+   this._todoService.createOne(form.value).subscribe(() => {
     this._todoService.findAll().subscribe((todos) => {
-      this.todos = todos; //je mets a jour la liste sans recharger la page
+      this.todos = todos.reverse(); //je mets a jour la liste sans recharger la page reverser()=met en haut de la liste
       });
     });
    }
   }
 
+  editTodo(todo:Todo){
+    todo.isEditable = !todo.isEditable;
 
+    if(!todo.isEditable){
+      this._todoService
+      .editOne(todo).subscribe((updated) => {
+        const index = this.todos.findIndex(t => t.id == updated.id);
+          this.todos.splice(index, 1, updated);
+        });
+      };
+  }
 
+  
    /** methode qui supprime un todo */
   deleteTodoItem(todo: Todo) {
     this._todoService.deleteOne(todo.id).subscribe(() => {
       this.todos = this.todos.filter((item) => item.id !== todo.id);
     });
   }
-
 }

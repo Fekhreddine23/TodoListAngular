@@ -5,6 +5,12 @@
   <div class="todo" *ngFor="let todo of todos">
     <h3 [class.done]="todo.done">{{todo.text}} </h3>
     <div class="buttons">
+      <button   class="bt-check"
+      (click)="editTodo(todo)"> 
+      {{ todo.isEditable? '✖︎' : '✔︎' }}
+      </button>
+
+
     <button   class="bt-check"
     (click)="changeStateOfTodo(todo)"> 
     {{ todo.done? '✖︎' : '✔︎' }}

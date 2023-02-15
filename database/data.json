@@ -3,7 +3,8 @@
     {
       "id": "08c6a032-38bd-4cf7-986b-24ba7478c818",
       "text": "Faire le ménage",
-      "done": false
+      "done": false,
+      "isEditable": false
     },
     {
       "id": "b3be5c79-02b0-4b3b-8299-4746aee2ca1c",
@@ -33,6 +34,24 @@
       "text": "velo",
       "id": "yyRtvMz",
       "done": false
+    },
+    {
+      "text": "sport",
+      "id": "9MNFo3f",
+      "isEditable": false,
+      "done": false
+    },
+    {
+      "text": "sport",
+      "id": "I2ytu_0"
+    },
+    {
+      "text": "cuisiner",
+      "id": "8aGGSO-"
+    },
+    {
+      "text": "jouer",
+      "id": "CdaLm8q"
     }
   ]
 }
