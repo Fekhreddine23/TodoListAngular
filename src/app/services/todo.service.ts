@@ -25,7 +25,7 @@ export class TodoService {
    return this._http.post<Todo>(this._baseUrl, todo)
   }
 
-  editOne(id: string, todo:Todo){
+  editOne( todo:Todo){
     return this._http.put<Todo>(`${this._baseUrl}/${todo.id}`, todo)
   }
 

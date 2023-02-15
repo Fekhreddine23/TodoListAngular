@@ -1,27 +1,48 @@
 {
-    "todos": [
-      {
-        "id": "08c6a032-38bd-4cf7-986b-24ba7478c818",
-        "text": "Faire le ménage"
-      },
-      {
-        "id": "b3be5c79-02b0-4b3b-8299-4746aee2ca1c",
-        "text": "Acheter une tomate",
-        "done": true
-      },
-      {
-        "id": "95dd2963-8910-4a36-aee8-5b266388ca24",
-        "text": "Courir 100 mètres"
-      },
-      {
-        "id": "3de4def8-fba3-4b03-9a62-7de31e9f7e31",
-        "text": "Faire du sport",
-        "done": true
-      },
-      {
-        "id": "ceaca077-5e6f-4307-b9c8-1d1f36fc1a31",
-        "text": "Connaître Angular",
-        "done": true
-      }
-    ]
-  }
+  "todos": [
+    {
+      "id": "08c6a032-38bd-4cf7-986b-24ba7478c818",
+      "text": "Faire le ménage",
+      "done": false
+    },
+    {
+      "id": "b3be5c79-02b0-4b3b-8299-4746aee2ca1c",
+      "text": "Acheter une tomate",
+      "done": true
+    },
+    {
+      "id": "95dd2963-8910-4a36-aee8-5b266388ca24",
+      "text": "Courir 100 mètres"
+    },
+    {
+      "id": "3de4def8-fba3-4b03-9a62-7de31e9f7e31",
+      "text": "Faire du sport",
+      "done": true
+    },
+    {
+      "id": "ceaca077-5e6f-4307-b9c8-1d1f36fc1a31",
+      "text": "Connaître Angular",
+      "done": true
+    },
+    {
+      "text": "coco",
+      "id": "GM1snl4",
+      "done": false
+    },
+    {
+      "text": "manger",
+      "id": "cYjVSfR",
+      "done": false
+    },
+    {
+      "text": "jouer",
+      "id": "2oBG3Dm",
+      "done": false
+    },
+    {
+      "text": "velo",
+      "id": "yyRtvMz",
+      "done": false
+    }
+  ]
+}

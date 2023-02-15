@@ -6,7 +6,7 @@
     <h3 [class.done]="todo.done">{{todo.text}} </h3>
     <div class="buttons">
     <button   class="bt-check"
-    (click)="todo.done = !todo.done"> 
+    (click)="changeStateOfTodo(todo)"> 
     {{ todo.done? '✖︎' : '✔︎' }}
     </button>
     <button class="bt-close">✖︎</button>
@@ -14,3 +14,11 @@
   </div>
   
 </div>
+
+
+<!--  Donner la possibilité à l'utilisateur de créer une nouvelle tâche  -->
+<form  #FORMULAIRE="ngForm" (submit)="addTodoItem(FORMULAIRE)">
+  <input type="text" ngModel name="text">
+  <button type="submit">Add</button>
+</form>
+

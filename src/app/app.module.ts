@@ -8,7 +8,7 @@ import { TodosComponent } from './componant/todos/todos.component';
 import { FooterComponent } from './componant/footer/footer.component'; 
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './componant/contact/contact.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +23,8 @@ import { ContactComponent } from './componant/contact/contact.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
