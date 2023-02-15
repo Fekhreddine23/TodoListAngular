@@ -43,4 +43,13 @@ export class TodosComponent  implements OnInit{
    }
   }
 
+
+
+   /** methode qui supprime un todo */
+  deleteTodoItem(todo: Todo) {
+    this._todoService.deleteOne(todo.id).subscribe(() => {
+      this.todos = this.todos.filter((item) => item.id !== todo.id);
+    });
+  }
+
 }

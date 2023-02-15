@@ -9,7 +9,7 @@
     (click)="changeStateOfTodo(todo)"> 
     {{ todo.done? '✖︎' : '✔︎' }}
     </button>
-    <button class="bt-close">✖︎</button>
+    <button class="bt-close" (click)="deleteTodoItem(todo)">✖︎</button>
     </div>
   </div>
   
