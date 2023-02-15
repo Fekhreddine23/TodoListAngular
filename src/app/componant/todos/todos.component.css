@@ -17,3 +17,10 @@
   .todo:last-of-type {
     border: none;
   }
+
+   
+  
+  .todo .done {
+    text-decoration: line-through;
+    color: #888;
+  }
