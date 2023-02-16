@@ -49,10 +49,7 @@ export class TodosComponent  implements OnInit{
 
     if(!todo.isEditable){
       this._todoService
-      .editOne(todo).subscribe((updated) => {
-        const index = this.todos.findIndex(t => t.id == updated.id);
-          this.todos.splice(index, 1, updated);
-        });
+      .editOne(todo).subscribe();
       };
   }
 
@@ -60,9 +57,7 @@ export class TodosComponent  implements OnInit{
    /** methode qui supprime un todo */
   deleteTodoItem(todo: Todo) {
     if(todo.id){
-      this._todoService.deleteOne(todo.id).subscribe(() => {
-        this.todos = this.todos.filter((item) => item.id !== todo.id);
-      });
+      this._todoService.deleteOne(todo.id).subscribe();
     }
     
   }

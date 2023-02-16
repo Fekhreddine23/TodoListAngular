@@ -44,12 +44,34 @@ export class TodoService {
 
   }
 
-  editOne( todo:Todo): Observable<Todo> {
-    return this._http.put<Todo>(`${this._baseUrl}/${todo.id}`, todo)
+
+   /**Avec les observables */
+  editOne(todo: Todo): Observable<Todo> {
+    return this._http.put<Todo>(`${this._baseUrl}/${todo.id}`, todo).pipe(
+      tap(updatedTodo => {
+        const todos = this.todos$.value;
+        const index = todos.findIndex(t => t.id === updatedTodo.id);
+        if (index !== -1) {
+          todos[index] = updatedTodo;
+          this.todos$.next(todos);
+        }
+      })
+    );
   }
 
+
+  /**Avec les observables */
   deleteOne(id: string): Observable<Todo> {
-    return this._http.delete(`${this._baseUrl}/${id}`);
+    return this._http.delete<Todo>(`${this._baseUrl}/${id}`).pipe(
+      tap(deletedTodo => {
+        const todos = this.todos$.value;
+        const index = todos.findIndex(t => t.id === deletedTodo.id);
+        if (index !== -1) {
+          todos.splice(index, 1);
+          this.todos$.next(todos);
+        }
+      })
+    );
   }
 
 }

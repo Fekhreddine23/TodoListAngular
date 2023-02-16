@@ -27,14 +27,10 @@
       "isEditable": false
     },
     {
-      "text": "manger",
-      "id": "cYjVSfR",
-      "done": false
-    },
-    {
-      "text": "velo",
+      "text": "promener le chien",
       "id": "yyRtvMz",
-      "done": false
+      "done": true,
+      "isEditable": false
     },
     {
       "text": "sport",
