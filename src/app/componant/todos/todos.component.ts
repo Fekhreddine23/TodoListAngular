@@ -11,7 +11,7 @@ import { TodoService } from 'src/app/services/todo.service';
 export class TodosComponent  implements OnInit{
   
   todos$ = this._todoService.todos$;
-  todos: Todo[] = [];
+ // todos: Todo[] = [];
   
   todo: any;
   constructor(private _todoService: TodoService){}
@@ -40,11 +40,7 @@ export class TodosComponent  implements OnInit{
   addTodoItem(form: NgForm) {
     if (form.valid && form.touched) {
      // this.todo.id = crypto.randomUUID;
-   this._todoService.createOne(form.value).subscribe(() => {
-    this._todoService.findAll().subscribe((todos) => {
-      this.todos = todos.reverse(); //je mets a jour la liste sans recharger la page reverser()=met en haut de la liste
-      });
-    });
+   this._todoService.createOne(form.value).subscribe(); //connecte a l observable httpclient
    }
   }
 
@@ -63,8 +59,11 @@ export class TodosComponent  implements OnInit{
   
    /** methode qui supprime un todo */
   deleteTodoItem(todo: Todo) {
-    this._todoService.deleteOne(todo.id).subscribe(() => {
-      this.todos = this.todos.filter((item) => item.id !== todo.id);
-    });
+    if(todo.id){
+      this._todoService.deleteOne(todo.id).subscribe(() => {
+        this.todos = this.todos.filter((item) => item.id !== todo.id);
+      });
+    }
+    
   }
 }
