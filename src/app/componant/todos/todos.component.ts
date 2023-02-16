@@ -9,19 +9,24 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent  implements OnInit{
-
+  
+  todos$ = this._todoService.todos$;
   todos: Todo[] = [];
   
   todo: any;
   constructor(private _todoService: TodoService){}
 
-  ngOnInit(){ //on chargement appel findAll()
+  ngOnInit(){
+    this._todoService.findAll().subscribe()
+  }
+
+  /*ngOnInit(){ //on chargement appel findAll()
     this._todoService
     .findAll()
     .subscribe(todosReceived =>{
       this.todos = todosReceived;
     });
-  }
+  }*/
 
   /**methode qui se declenche au click  */
   changeStateOfTodo(todo: Todo){
