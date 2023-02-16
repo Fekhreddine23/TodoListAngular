@@ -31,9 +31,12 @@ export class TodoService {
 
 
 
-
+  /**Avec les observables */
   findById(id: string): Observable<Todo>{
-   return  this._http.get<Todo>(`${this._baseUrl}/${id}`);      
+   return  this._http.get<Todo>(`${this._baseUrl}/${id}`)
+   .pipe(
+    tap(todo => this.todo$.next(todo))
+  );;      
   }
 
   createOne(todo : Todo): Observable<Todo> {
